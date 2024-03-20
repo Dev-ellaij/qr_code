@@ -1,0 +1,283 @@
+import 'package:flutter/material.dart';
+import 'package:qr_code_scanner/qr_code_scanner.dart';
+
+
+
+class  extends State<Qrcodegenerator> {
+  final qrkey = GlobalKey(debugLabel: 'QR');
+
+Barcode? barcode;
+  QRviewcontroller? controller;
+  
+
+
+  final controller = TextEditingController();
+  constqrgenerator({super.key});
+  
+  @override
+  Widget build(BuildContext context) {
+    // TODO: implement build
+    throw UnimplementedError();
+  @override
+
+  Widget build(BuildContext context) => SafeArea(child: child)
+  child: scaffold(
+    body: Stack(
+   alignment  : Alignment .center
+   children : <Widget> [
+    buildQRview(context),
+    Positioned(bottom:  10, child: buildresult ()),
+    Positioned(top: 10, child: buildcontrolbuttons()),
+    ]
+    ),
+   ), // scaffold
+   ); // safearea
+  
+  Widget buildcontrol buttons() => Row(
+    mainaxissize : MainAxisSize.max,
+    mainaxisalignment : MainAxisAlignment.center,
+    crossaxisalignment: CrossAxisAlignment.center,
+    children: <Widget> []
+IconButton(
+  icon:  FutureBuilder (
+  future: controller?. getcamerainfo(),
+  Builder : (context, snapshot) {}
+  if (snapshot.data!= null) {}
+    return Icon ( Icons. switch_camera);
+              snapshot.data ! ? Icons.flash_on : Icons.flash_off; // icon
+    } else {
+    return Container();
+  }
+},
+}, //IconButton
+onPressed:  () async  {},
+), // iconbutton
+  Iconbutton(
+    icon: Icon(Icons.switch_camera),
+    onpressed : () async {},
+    await controller ?.flashcamera();
+    setState(() {});
+  },
+ 
+ ), // widget>[]
+], // row
+
+
+Widget build result () => Container(
+padding:EdgeInsets.all(12) ,
+  decoration : BoxDecoration (
+    color : Color. blue24,
+  )
+  child ; Text (
+   barcode ! = null ?'Result: s{barcode!.code}' : 'scan a code'
+   maxlines: 3,
+);
+class _qrcodegeneratordartState extends State_qrcodegeneratordart> {
+
+  @override
+  Widget build(BuildContext context) =>Scaffold(
+    appBar: AppBar(
+      title:  Text('qr code generator'),
+    ), // appbar
+    body: Center(
+      child: SingleChildScrollView(
+        padding: EdgeInsets.all(24),
+        child: Column(
+          mainAxisAlignment:  MainAxisAlignment.center,
+       
+         
+
+          @override
+          Void Dispose () {
+            controller?. dispose ();
+            super. dispose ();
+        
+
+          @override
+          Void resassemble () async {
+            super.ressemble ();
+
+            if (platform. isAndriod) {
+              await controller!.pausecamera();
+            }
+
+
+            @override
+            widget build (Buildcontext context ) => QRview(
+              key: qrkey,
+               onQRviewcreated : QRviewcreated,
+               overlay: Qrcodegeneratoroverlayshape (
+                bordercolor: Theme.of (context)
+
+ backgroundcolor: Colors.blue,
+  sizedbox(height: 40),
+  buildtextfield(context),
+],
+        ), //column
+      ),// singlechildscrollview
+    ), // center
+  );
+ Widget  (BuildContext context) =>  qrview(
+  Key: qrkey,
+  onqrviewcreated: onqrviewcreted,
+  overlay : qrgeneratoroverlayshape
+  
+
+   bordercolor: Theme.of(context).accentcolor,
+  borderradius : 10,
+  borderlength: 20,
+  borderwidth : 10,
+  cutoutsize : mediaquery.of() context.size.width *0.8,
+ ), // qrcodegeneratoroverlayshape
+  );//QRView
+
+
+ void onqrcodecreated(qrcodecontroller controller) {}
+ setstate ()) => this.controller = controller)
+
+
+controller.scannedDatastream
+.listen((barcode) = );
+}
+}import 'package:flutter/material.dart';
+import 'package:qr_code_scanner/qr_code_scanner.dart';
+
+
+
+class  extends State<Qrcodegenerator> {
+  final qrkey = GlobalKey(debugLabel: 'QR');
+
+Barcode? barcode;
+  QRviewcontroller? controller;
+  
+
+
+  final controller = TextEditingController();
+  constqrgenerator({super.key});
+  
+  @override
+  Widget build(BuildContext context) {
+    // TODO: implement build
+    throw UnimplementedError();
+  @override
+
+  Widget build(BuildContext context) => SafeArea(child: child)
+  child: scaffold(
+    body: Stack(
+   alignment  : Alignment .center
+   children : <Widget> [
+    buildQRview(context),
+    Positioned(bottom:  10, child: buildresult ()),
+    Positioned(top: 10, child: buildcontrolbuttons()),
+    ]
+    ),
+   ), // scaffold
+   ); // safearea
+  
+  Widget buildcontrol buttons() => Row(
+    mainaxissize : MainAxisSize.max,
+    mainaxisalignment : MainAxisAlignment.center,
+    crossaxisalignment: CrossAxisAlignment.center,
+    children: <Widget> []
+IconButton(
+  icon:  FutureBuilder (
+  future: controller?. getcamerainfo(),
+  Builder : (context, snapshot) {}
+  if (snapshot.data!= null) {}
+    return Icon ( Icons. switch_camera);
+              snapshot.data ! ? Icons.flash_on : Icons.flash_off; // icon
+    } else {
+    return Container();
+  }
+},
+}, //IconButton
+onPressed:  () async  {},
+), // iconbutton
+  Iconbutton(
+    icon: Icon(Icons.switch_camera),
+    onpressed : () async {},
+    await controller ?.flashcamera();
+    setState(() {});
+  },
+ 
+ ), // widget>[]
+], // row
+
+
+Widget build result () => Container(
+padding:EdgeInsets.all(12) ,
+  decoration : BoxDecoration (
+    color : Color. blue24,
+  )
+  child ; Text (
+   barcode ! = null ?'Result: s{barcode!.code}' : 'scan a code'
+   maxlines: 3,
+);
+class _qrcodegeneratordartState extends State_qrcodegeneratordart> {
+
+  @override
+  Widget build(BuildContext context) =>Scaffold(
+    appBar: AppBar(
+      title:  Text('qr code generator'),
+    ), // appbar
+    body: Center(
+      child: SingleChildScrollView(
+        padding: EdgeInsets.all(24),
+        child: Column(
+          mainAxisAlignment:  MainAxisAlignment.center,
+       
+         
+
+          @override
+          Void Dispose () {
+            controller?. dispose ();
+            super. dispose ();
+        
+
+          @override
+          Void resassemble () async {
+            super.ressemble ();
+
+            if (platform. isAndriod) {
+              await controller!.pausecamera();
+            }
+
+
+            @override
+            widget build (Buildcontext context ) => QRview(
+              key: qrkey,
+               onQRviewcreated : QRviewcreated,
+               overlay: Qrcodegeneratoroverlayshape (
+                bordercolor: Theme.of (context)
+
+ backgroundcolor: Colors.blue,
+  sizedbox(height: 40),
+  buildtextfield(context),
+],
+        ), //column
+      ),// singlechildscrollview
+    ), // center
+  );
+ Widget  (BuildContext context) =>  qrview(
+  Key: qrkey,
+  onqrviewcreated: onqrviewcreted,
+  overlay : qrgeneratoroverlayshape
+  
+
+   bordercolor: Theme.of(context).accentcolor,
+  borderradius : 10,
+  borderlength: 20,
+  borderwidth : 10,
+  cutoutsize : mediaquery.of() context.size.width *0.8,
+ ), // qrcodegeneratoroverlayshape
+  );//QRView
+
+
+ void onqrcodecreated(qrcodecontroller controller) {}
+ setstate ()) => this.controller = controller)
+
+
+controller.scannedDatastream
+.listen((barcode) = );
+}
+}
